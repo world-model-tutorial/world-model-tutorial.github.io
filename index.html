@@ -13,19 +13,28 @@
       background-color: #fdfdfd;
     }
 
-        .hero {
-    background-color: black;
-    background-image: url('assets/bg.png'); /* your image */
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain; /* this is the key change */
-    height: 672px;
-    position: relative;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
+    .hero {
+      background-color: black;
+      background-image: url('assets/bg.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;       /* 保证完整显示不裁剪 */
+      aspect-ratio: 3 / 1;            /* 根据宽度自动调整高度 */
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+
+    @media (max-width: 600px) {
+      .hero {
+        aspect-ratio: auto;
+        height: auto;
+        padding-top: 33.33%;  /* fallback: 3:1 的比例高度 */
+      }
     }
 
     .overlay {
@@ -61,6 +70,7 @@
     .hero-content {
       position: relative;
       z-index: 2;
+      color: white;
     }
 
     .hero h1 {
