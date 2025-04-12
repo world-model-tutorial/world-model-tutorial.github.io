@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Visual Concepts Workshop</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      color: #111;
+      line-height: 1.6;
+      background-color: #fdfdfd;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=1600&q=80');
+      background-size: cover;
+      background-position: center;
+      height: 300px;
+      position: relative;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.4);
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+
+    .logo-left,
+    .logo-right {
+      position: absolute;
+      top: 20px;
+      z-index: 3;
+    }
+
+    .logo-left {
+      left: 20px;
+    }
+
+    .logo-right {
+      right: 20px;
+    }
+
+    .logo-left img,
+    .logo-right img {
+      height: 60px;
+      width: auto;
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero h1 {
+      font-size: 2.8em;
+      margin: 0;
+    }
+
+    .hero h2 {
+      font-weight: normal;
+      font-size: 1.4em;
+      margin-top: 10px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    nav {
+      text-align: center;
+      margin: 30px 0;
+    }
+
+    nav a {
+      margin: 0 12px;
+      text-decoration: none;
+      color: #0056b3;
+    }
+
+    section {
+      margin-bottom: 60px;
+    }
+
+    h3 {
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 5px;
+      font-size: 1.2em;
+    }
+
+    a {
+      color: #0056b3;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #888;
+      margin-top: 60px;
+      padding-bottom: 40px;
+    }
+  </style>
+</head>
+<body>
+  <div class="hero">
+    <div class="overlay"></div>
+
+    <div class="logo-left">
+      <img src="assets/CVPR.png" alt="CVPR Logo">
+    </div>
+
+    <div class="logo-right">
+      <img src="assets/MMLab.png" alt="S-Lab Logo">
+    </div>
+
+    <div class="hero-content">
+      <h1>From Video Generation to World Model</h1>
+      <h2>CVPR 2025 Tutorial • Nashville, USA</h2>
+    </div>
+  </div>
+
+  <div class="container">
+    <nav>
+      <a href="#about">About</a>
+      <a href="#cfp">Call for Papers</a>
+      <a href="#speakers">Speakers</a>
+      <a href="#schedule">Schedule</a>
+      <a href="#organizers">Organizers</a>
+    </nav>
+
+    <section id="about">
+      <h3>About</h3>
+      <p>
+        The Visual Concepts Workshop brings together researchers in computer vision, machine learning, and cognitive science to explore the emergence and grounding of visual concepts in artificial systems.
+      </p>
+    </section>
+
+    <section id="cfp">
+      <h3>Call for Papers</h3>
+      <p>
+        We invite submissions on topics including visual representation learning, concept discovery, language-vision grounding, and related areas. Papers should be no more than 4 pages excluding references.
+      </p>
+      <p>
+        Submission Deadline: <strong>April 30, 2025</strong><br>
+        Notification of Acceptance: <strong>May 20, 2025</strong>
+      </p>
+    </section>
+
+    <section id="speakers">
+      <h3>Invited Speakers</h3>
+      <ul>
+        <li>xxx</li>
+        <li>xxx</li>
+        <li>xxx</li>
+      </ul>
+    </section>
+
+    <section id="schedule">
+      <h3>Schedule</h3>
+      <p>Details coming soon.</p>
+    </section>
+
+    <section id="organizers">
+      <h3>Organizers</h3>
+      <ul>
+        <li>xxx</li>
+        <li>xxx</li>
+        <li>xxx</li>
+      </ul>
+    </section>
+
+    <footer>
+      &copy; From Video Generation to World Model Tutorial
+    </footer>
+  </div>
+</body>
+</html>
