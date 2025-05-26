@@ -30,8 +30,22 @@
       scroll-behavior: smooth;
     }
 
-  
     .hero {
+      background-color: black;
+      background-image: url('assets/bg.png');
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: contain;       
+      aspect-ratio: 3 / 1;            
+      width: 100%;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+    }
+    /* .hero {
       background: url('assets/bg.png') center center/cover no-repeat;
       display: flex;
       flex-direction: column;
@@ -41,7 +55,7 @@
       text-align: center;
       color: white;
       position: relative;
-    }
+    } */
 
     .hero::after {
       content: '';
