@@ -22,6 +22,28 @@ div.section h1 {
     margin-bottom: 30px;
 }
 
+td {
+    vertical-align: middle;
+}
+
+td.programme p.title {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+td.programme .speaker img {
+    border-radius: 50%;
+    display: inline-block;
+    max-width: 48px;
+    margin-right: 10px;
+}
+
+td.programme .speaker span.position {
+    color: #666;
+    font-size: 14px;
+}
+
 div.card {
     border: none;
     margin-bottom: 20px;
