@@ -31,7 +31,6 @@
             <li class="nav-item"><a href="#schedule">Schedule</a></li>
             <li class="nav-item"><a href="#speakers">Speakers</a></li>
             <li class="nav-item"><a href="#organizers">Organizers</a></li>
-            <li class="nav-item"><a href="#sponsors">Sponsors</a></li>
           </ul>
         </div> <!-- .offcanvas-body -->
       </div> <!-- .offcanvas -->
@@ -309,17 +308,20 @@
               </div> <!-- .card-body -->
             </div> <!-- .card -->
           </div> <!-- .col -->
+          <div class="col-lg-3 col-md-4 col-6">
+            <div class="card">
+              <img src="/assets/images/kwai.svg" class="card-img-top card-img-square">
+              <div class="card-body">
+                <h5 class="card-title">Kwai</h5>
+                <p class="card-text">Advisory Organizer</p>
+                <ul class="list-inline">
+                  <li class="list-inline-item"><a href="//ir.kuaishou.com/" target="_blank"><i class="fa fa-house"></i></a></li>
+                  <li class="list-inline-item"><a href="//github.com/kwai" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                </ul>
+              </div> <!-- .card-body -->
+            </div> <!-- .card -->
+          </div> <!-- .col -->
         </div> <!-- .row -->
-      </div> <!-- .container -->
-    </div> <!-- .section -->
-    <div id="sponsors" class="section">
-      <div class="container">
-        <h2>Sponsors</h2>
-        <ul class="list-inline">
-          <li class="list-inline-item sponsor">
-            <a href="//www.kuaishou.com/about/" target="_blank"><img src="/assets/images/kwai.svg"></a>
-          </li>
-        </ul>
       </div> <!-- .container -->
     </div> <!-- .section -->
   </div> <!-- #content -->
@@ -333,7 +335,7 @@
     $(document).on('scroll', function() {
       let currentOffset = $(window).scrollTop() + 80,
           currentSection = "",
-          sections = ["intro", "schedule", "speakers", "organizers", "sponsors"];
+          sections = ["intro", "schedule", "speakers", "organizers"];
 
       for (let i = 0; i < sections.length; ++i) {
         if (currentOffset < $('#' + sections[i]).offset().top) {
