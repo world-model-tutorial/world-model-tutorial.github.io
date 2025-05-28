@@ -64,6 +64,10 @@ div.section h2 {
     margin-bottom: 30px;
 }
 
+th:first-child {
+    min-width: 133px;
+}
+
 td {
     vertical-align: middle;
 }
