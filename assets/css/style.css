@@ -14,6 +14,7 @@
 }
 
 div#header {
+    background-color: rgba(255, 255, 255, 0.5);
     padding: 10px 0;
     -webkit-backdrop-filter: blur(15px);
             backdrop-filter: blur(15px);
@@ -47,13 +48,18 @@ div#header li.nav-item:hover > a {
     color: var(--theme-color);
 }
 
-
 div#content {
     margin-top: 80px;
 }
 
 div#hero {
-    padding: 60px 0;
+    background-color: #00091e;
+    background-image: url(../images/hero-bg.webp);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    padding: 100px 0;
 }
 
 div#hero i.fa {
@@ -183,6 +189,10 @@ div#footer img {
     div#navbar .offcanvas-body li.nav-item {
         padding: 10px 0;
     }
+
+    div#hero {
+        padding: 80px 0;
+    }
 }
 
 @media only screen and (max-width: 767px) {
@@ -201,9 +211,10 @@ div#footer img {
     div.card-body {
         padding: 16px 0;
     }
-}
 
-@media only screen and (min-width: 480px) and (max-width: 767px) {
+    div#hero {
+        padding: 60px 0;
+    }
 }
 
 @media only screen and (max-width: 479px) {
