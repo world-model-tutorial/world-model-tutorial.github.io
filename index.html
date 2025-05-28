@@ -10,29 +10,44 @@
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
 </head>
 <body>
-  <div id="header">
+  <div id="header" class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <ul class="list-inline">
-        <li class="list-inline-item">
-          <img id="logo" src="/assets/images/logo.png" alt="Logo">
-        </li>
-        <li class="list-inline-item"><a href="#intro">Introduction</a></li>
-        <li class="list-inline-item"><a href="#schedule">Schedule</a></li>
-        <li class="list-inline-item"><a href="#speakers">Speakers</a></li>
-        <li class="list-inline-item"><a href="#organizers">Organizers</a></li>
-        <li class="list-inline-item"><a href="#sponsors">Sponsors</a></li>
-      </ul>
+      <div class="navbar-brand">
+          <img src="/assets/images/logo.png" alt="Logo">
+      </div> <!-- #logo -->
+      <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div id="navbar" class="offcanvas offcanvas-end">
+        <div class="offcanvas-header border-bottom">
+          <h5 class="offcanvas-title">Menu</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div> <!-- .offcanvas-header -->
+        <div class="offcanvas-body">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a href="#intro">Introduction</a></li>
+            <li class="nav-item"><a href="#schedule">Schedule</a></li>
+            <li class="nav-item"><a href="#speakers">Speakers</a></li>
+            <li class="nav-item"><a href="#organizers">Organizers</a></li>
+            <li class="nav-item"><a href="#sponsors">Sponsors</a></li>
+          </ul>
+        </div> <!-- .offcanvas-body -->
+      </div> <!-- .offcanvas -->
     </div> <!-- .container -->
   </div> <!-- #header -->
   <div id="content">
     <div id="hero">
       <div class="container">
         <h1>From Video Generation to World Model</h1>
-        <p>CVPR 2025 Tutorial<br>6/11/2025 9:00-17:00 (GMT-5)<br>Room 204</p>
+        <p>
+          CVPR 2025 Tutorial<br>
+          <i class="fa fa-calendar-days"></i> 6/11/2025 9:00-17:00 (GMT-5)<br>
+          <i class="fa fa-location-dot"></i> Room 204
+        </p>
       </div> <!-- .container -->
     </div> <!-- #hero -->
-    <div class="container">
-      <div class="section">
+    <div class="section">
+      <div class="container">
         <h2 id="intro">Introduction</h2>
         <p>
           In recent years, the research community has made significant strides in generative 
@@ -42,11 +57,13 @@
           world models. This tutorial offers a deep dive into recent advances in text-to-video 
           generation, diffusion-based video models, and the bridge from generative video to 
           physical and interactive world modeling. We aim to provide attendees with a comprehensive
-           understanding of these cutting-edge methods and how they contribute to building 
-           embodied world models.
+            understanding of these cutting-edge methods and how they contribute to building 
+            embodied world models.
         </p>
-      </div> <!-- .section -->
-      <div class="section">
+      </div> <!-- .container -->
+    </div> <!-- .section -->
+    <div class="section">
+      <div class="container">
         <h2 id="schedule">Schedule</h2>
         <table class="table table-striped">
           <thead>
@@ -65,7 +82,9 @@
               <td class="programme">
                 <p class="title">Invited Talk: The Placeholder of the Title of the Talk</p>
                 <div class="speaker d-flex">
-                  <img src="/assets/images/avatars/angjoo.webp">
+                  <div class="avatar">
+                    <img src="/assets/images/avatars/angjoo.webp">
+                  </div> <!-- .avatar -->
                   <div class="desc">
                     <span class="name">Angjoo Kanazawa</span><br>
                     <span class="position">Assistant Professor at UC Berkeley
@@ -126,8 +145,10 @@
             </tr>
           </tbody>
         </table>
-      </div> <!-- .section -->
-      <div class="section">
+      </div> <!-- .container -->
+    </div> <!-- .section -->
+    <div class="section">
+      <div class="container">
         <h2 id="speakers">Speakers</h2>
         <div class="row">
           <div class="col-lg-3 col-md-4 col-6">
@@ -196,8 +217,10 @@
             </div> <!-- .card -->
           </div> <!-- .col -->
         </div> <!-- .row -->
-      </div> <!-- .section -->
-      <div class="section">
+      </div> <!-- .container -->
+    </div> <!-- .section -->
+    <div class="section">
+      <div class="container">
         <h2 id="organizers">Organizers</h2>
         <div class="row">
           <div class="col-lg-3 col-md-4 col-6">
@@ -285,16 +308,18 @@
             </div> <!-- .card -->
           </div> <!-- .col -->
         </div> <!-- .row -->
-      </div> <!-- .section -->
-      <div class="section">
+      </div> <!-- .container -->
+    </div> <!-- .section -->
+    <div class="section">
+      <div class="container">
         <h2 id="sponsors">Sponsors</h2>
         <ul class="list-inline">
           <li class="list-inline-item sponsor">
-            <a href="//www.kuaishou.com/about/"><img src="/assets/images/kwai.svg"></a>
+            <a href="//www.kuaishou.com/about/" target="_blank"><img src="/assets/images/kwai.svg"></a>
           </li>
         </ul>
-      </div> <!-- .section -->
-    </div> <!-- .container -->
+      </div> <!-- .container -->
+    </div> <!-- .section -->
   </div> <!-- #content -->
   <div id="footer">
     <div class="container">
