@@ -4,7 +4,7 @@
 # @Author: Haozhe Xie
 # @Date:   2025-05-27 10:14:03
 # @Last Modified by: Haozhe Xie
-# @Last Modified at: 2025-05-27 10:47:51
+# @Last Modified at: 2025-05-28 14:28:46
 # @Email:  root@haozhexie.com
 
 import os
@@ -26,9 +26,11 @@ def main():
     avatar_images = os.listdir(avatar_dir)
 
     for ai in avatar_images:
-        fname, _ = os.path.splitext(ai)
-        output_file_path = os.path.join(avatar_dir, "%s.webp" % fname)
+        fname, ext = os.path.splitext(ai)
+        if ext.lower() == ".webp":
+            continue
 
+        output_file_path = os.path.join(avatar_dir, "%s.webp" % fname)
         img = cv2.imread(os.path.join(avatar_dir, ai))
         img = _center_crop(img)
         img = cv2.resize(img, (512, 512))
