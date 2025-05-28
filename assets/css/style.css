@@ -1,7 +1,22 @@
+:root {
+	--theme-color: var(--bs-blue);
+}
+
+::-moz-selection {
+	background: var(--selection-bg-color);
+	color: var(--active-text-color);
+	text-shadow: none;
+}
+
+::selection {
+	background: var(--selection-bg-color);
+	color: var(--active-text-color);
+}
+
 div#header {
     padding: 10px 0;
-    -webkit-backdrop-filter: blur(14px);
-            backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(15px);
+            backdrop-filter: blur(15px);
     box-shadow: 0 .275rem .75rem -0.0625rem rgba(19, 16, 34, .06), 0 .125rem .4rem -0.0625rem rgba(19, 16, 34, .03);
 }
 
@@ -26,6 +41,12 @@ div#header li.nav-item > a {
     color: #333;
     text-decoration: none;
 }
+
+div#header li.nav-item.active > a,
+div#header li.nav-item:hover > a {
+    color: var(--theme-color);
+}
+
 
 div#content {
     margin-top: 80px;
@@ -121,8 +142,12 @@ div.card li.list-inline-item {
     width: 34px;
 }
 
-div.card li.list-inline-item:hover a {
-    /*TODO*/
+div.card li.list-inline-item:hover {
+    background-color: var(--theme-color);
+}
+
+div.card li.list-inline-item:hover > a {
+    color: #fff;
 }
 
 li.sponsor img {

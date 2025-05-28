@@ -8,6 +8,8 @@
   <link rel="stylesheet" href="/assets/css/fontawesome.min.css" />
   <link rel="stylesheet" href="/assets/css/style.css" />
   <link rel="icon" href="/assets/favicon.ico" type="image/x-icon" />
+  <script src="/assets/js/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
 </head>
 <body>
   <div id="header" class="navbar navbar-expand-lg fixed-top">
@@ -46,9 +48,9 @@
         </p>
       </div> <!-- .container -->
     </div> <!-- #hero -->
-    <div class="section">
+    <div id="intro" class="section">
       <div class="container">
-        <h2 id="intro">Introduction</h2>
+        <h2>Introduction</h2>
         <p>
           In recent years, the research community has made significant strides in generative 
           models, particularly in the area of video generation. Despite challenges in generating 
@@ -62,9 +64,9 @@
         </p>
       </div> <!-- .container -->
     </div> <!-- .section -->
-    <div class="section">
+    <div id="schedule" class="section">
       <div class="container">
-        <h2 id="schedule">Schedule</h2>
+        <h2>Schedule</h2>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -147,9 +149,9 @@
         </table>
       </div> <!-- .container -->
     </div> <!-- .section -->
-    <div class="section">
+    <div id="speakers" class="section">
       <div class="container">
-        <h2 id="speakers">Speakers</h2>
+        <h2>Speakers</h2>
         <div class="row">
           <div class="col-lg-3 col-md-4 col-6">
             <div class="card">
@@ -219,9 +221,9 @@
         </div> <!-- .row -->
       </div> <!-- .container -->
     </div> <!-- .section -->
-    <div class="section">
+    <div id="organizers" class="section">
       <div class="container">
-        <h2 id="organizers">Organizers</h2>
+        <h2>Organizers</h2>
         <div class="row">
           <div class="col-lg-3 col-md-4 col-6">
             <div class="card">
@@ -310,9 +312,9 @@
         </div> <!-- .row -->
       </div> <!-- .container -->
     </div> <!-- .section -->
-    <div class="section">
+    <div id="sponsors" class="section">
       <div class="container">
-        <h2 id="sponsors">Sponsors</h2>
+        <h2>Sponsors</h2>
         <ul class="list-inline">
           <li class="list-inline-item sponsor">
             <a href="//www.kuaishou.com/about/" target="_blank"><img src="/assets/images/kwai.svg"></a>
@@ -327,7 +329,29 @@
       <p>&copy;2025 <i>From Video Generation to World Model</i> Tutorial</p>
     </div> <!-- .container -->
   </div> <!-- #footer -->
-  <script src="/assets/js/jquery.min.js"></script>
-  <script src="/assets/js/bootstrap.min.js"></script>
+  <script type="text/javascript">
+    $(document).on('scroll', function() {
+      let currentOffset = $(window).scrollTop() + 80,
+          currentSection = "",
+          sections = ["intro", "schedule", "speakers", "organizers", "sponsors"];
+
+      for (let i = 0; i < sections.length; ++i) {
+        if (currentOffset < $('#' + sections[i]).offset().top) {
+          break;
+        }
+        currentSection = sections[i];
+      }
+
+      let $navbar = $('.navbar'),
+          $navLinks = $navbar.find('a');
+
+      $navLinks.parent().removeClass('active');
+      $navLinks.each(function() {
+        if ($(this).attr('href') === '#' + currentSection) {
+          $(this).parent().addClass('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>
