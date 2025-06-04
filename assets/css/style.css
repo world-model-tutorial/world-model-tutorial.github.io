@@ -65,7 +65,7 @@ div.section h2 {
 }
 
 th:first-child {
-    min-width: 133px;
+    width: 135px;
 }
 
 td {
@@ -76,6 +76,21 @@ td.programme p.title {
     font-size: 16px;
     font-weight: bold;
     margin-bottom: 5px;
+}
+
+td.programme p.abstract,
+td.programme p.bio {
+    color: #333;
+    display: none;
+    font-size: 14px;
+}
+
+td.programme ul.list-inline {
+    margin: 10px 0;
+}
+
+td.programme a {
+    text-decoration: none;
 }
 
 td.programme .avatar {
